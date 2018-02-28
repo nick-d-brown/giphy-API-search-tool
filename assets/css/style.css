@@ -1,0 +1,13 @@
+.image-box {
+    background-color: rgba(228, 126, 126, 0.55);
+    border: 2px solid white;
+    text-align: center;
+    height: 350px;
+    width: 350px;
+    border-radius: 5px;
+}
+
+.still {
+    height: 280px;
+    width: 320px;
+}
