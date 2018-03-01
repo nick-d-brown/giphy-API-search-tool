@@ -1,13 +1,113 @@
+body {
+    margin: 0px auto;
+    padding: 0px;
+    background-color: black;
+}
+
+.wrapper {
+    margin: 15px auto;
+    padding: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-container {
+    border-color: purple;
+    border-width: 7.5px;
+    border-style: solid;
+    border-radius: 7px;
+    max-width: 650px;
+    padding: 5px;
+    margin: 5px;
+
+     
+    animation: borderColor 6s linear infinite;
+}
+
+@keyframes borderColor
+{
+    0%   {border-color: red; }
+    20% {border-color: orange; }
+    40% {border-color: yellow; }
+    60% {border-color: green; }
+    80% {border-color: blue; }
+    100% {border-color: red; }
+}
+
+@keyframes background-color
+{
+    0%   {background-color: rgba(255, 0, 0, 0.5); }
+    20% {background-color: rgba(255, 166, 0, 0.5); }
+    40% {background-color: rgba(255, 255, 0, 0.5); }
+    60% {background-color: rgba(0, 128, 0, 0.5); }
+    80% {background-color: rgba(0, 0, 255, 0.5); }
+    100% {background-color: rgba(255, 0, 0, 0.5); }
+}
+
+.button-section {
+    margin: 5px;
+    padding: 5px;
+    max-width: 440px;
+}
+
+.heading-image {
+    margin: 5px;
+    padding: 5x;
+    text-align: center;
+}
+
+.input-form {
+    margin: 15px auto;
+    padding: 5x;
+    text-align: center;
+}
+
+.emotion-buttons {
+    margin: 5px;
+    padding: 5x;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.instruction-panel {
+    max-width: 650px;
+    text-align: center;
+
+}
+
+#gifPanel {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 60%;
+}
+
 .image-box {
-    background-color: rgba(228, 126, 126, 0.55);
+    background-color: rgba(128, 0, 128, 0.5);
     border: 2px solid white;
     text-align: center;
     height: 350px;
     width: 350px;
     border-radius: 5px;
+    flex-basis: auto;
+    font-weight: 600;
+    margin: 5px;
+
+    animation: background-color 10s linear infinite;
 }
 
 .still {
     height: 280px;
     width: 320px;
+}
+
+.emph-words{
+    text-decoration: underline;
 }

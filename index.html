@@ -10,31 +10,56 @@
 </head>
 
 <body>
+    <div class="wrapper">
+        
+            <div class="intro-container">
+                <div class="title">
+                    <h1>Gifs for your Friends</h1>
+                    <h2>The only gif button generator that creates gifs for you to send to your friends!</h2>
+                </div>
+                <div class="instruction-panel">
+                    <p>
+                        Have you ever needed to text your friend but couldn't find the words?... 
+                    </p>
+                    <p>
+                         Do you struggle with finding the strength to conjure up witty remarks to your mom's question of "What would you like for dinner?"... 
+                    </p>
+                    <p>
+                         If this describes you, then I welcome you to the <span class="emph-words"><strong>Gifs for your Friends search tool</strong></span>.
+                    </p>
+                    <h4>To Use the search tool:</h4>
+                    <p>
+                        Simply click on a preset button, or add your own button to click, and gifs related to the button will appear. To add your own button, start by typing it in the search field the your reaction to send to your friend, then click submit. Your button will appear with the other buttons. When you click on any of the buttons they will select a set of 10 gifs from the GIPHY website for you to view. Click on the Image to activate the gif. Above each of the images is a rating for the gif so you don't accidentally start a gif war by sending the wrong gif to your friend at work (whoops!)
+                    </p>
+                    <p>
+                        My buddy Paul will show you where to add and click on your buttons.
+                    </p>
+                </div>
+            </div>
+            <div class="button-section">
+                <div class="heading-image">
+                    <img src="./assets/images/paulpointingdown.gif" alt="gif of Paul McCartney pointing down.">
+                </div>
+                <div class="input-form">
+                    <form>
+                        <label for="emotion-input">Add a button: </label>
+                        <input type="text" id="emotionInput">
 
-    <h1>Gifs for your Friends</h1>
-    <h2>The only Gif button generator that creates gifs for you to send to your friends!</h2>
+                        <input type="button" id="addEmotion" value="submit">
+                    
+                    </form>
+                </div>    
+                <div class="emotion-buttons" id="emotionButtons">
 
-    <div class="instructionPanel">
-        <p>Simply click on a preset button, or add your own button to click. To do this, start by typing it in the search field the your reaction to send to your friend, then click submit. Your button will appear with the other buttons. When you click on any of the buttons they will select a set of 10 gifs from the GIPHY website for you to view. Click on the Image to activate the gif. Above each of the images is a rating for the gif so you don't accidentally start a gif war by sending the wrong gif to your friend at work (whoops!)
-        </p>
+                </div>
+            </div>
+            <div id="gifPanel">
+
+            </div>
+      
+        
+        
     </div>
-
-    <div id="emotionButtons">
-
-    </div>
-
-    <form id="">
-        <label for="emotion-input">Add an emotion button</label>
-        <input type="text" id="emotionInput">
-
-        <input type="button" id="addEmotion" value="submit">
-        <!-- <input type="button" id="removeEmotion" value="remove"> -->
-    </form>
-
-    <div id="gifPanel">
-
-    </div>
-
     <script src="./assets/jquery-3.3.1.min.js"></script>
     <script src="./assets/logic.js"></script>
 </body>
