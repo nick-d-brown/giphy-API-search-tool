@@ -9,7 +9,6 @@ $(document).ready(function () {
     var stillURL;
     var gifURL;
     var apiResponse;
-    // var newItem = $("#emotionInput").val().trim();
     var newItem;
 
     // Loops through the emotionGifs array and creates buttons
