@@ -2,7 +2,9 @@ $(document).ready(function () {
 
     // Global Variables
 
-    var emotionGifs = ["Happy", "Sad", "Hungover", "Tired", "LET'S GO!", "Excited", "Stoked" , "Sick", "Winning", "Frustrated"];
+    var topics = ["Happy", "Sad", "Hungover", "Tired", "LET'S GO!", "Excited", "Stoked" , "Sick", "Winning", "Frustrated", "GOOD MORNING", 
+                    "Good Night", "We're not friends anymore", "Get a life", "PARTY TIME", "Dancing Hamsters", "Star Wars Meme", 
+                    "Parks and Rec Memes", "The Office Memes", ];
 
     var myAPI = "iiHxX5ZyrJst3sHz4lwHPzpO14Eot1nx";
 
@@ -11,15 +13,15 @@ $(document).ready(function () {
     var apiResponse;
     var newItem;
 
-    // Loops through the emotionGifs array and creates buttons
+    // Loops through the topics array and creates buttons
    function buttonPrint() {
        
         $("#emotionButtons").empty();
    
-        for (var i =0; i < emotionGifs.length; i++) {
-            var newEmotionButton = $("<button>" + emotionGifs[i] + "</button>");
-            newEmotionButton.attr("id", "button_" + emotionGifs[i]);
-            newEmotionButton.attr("data-value", emotionGifs[i]);
+        for (var i =0; i < topics.length; i++) {
+            var newEmotionButton = $("<button>" + topics[i] + "</button>");
+            newEmotionButton.attr("id", "button_" + topics[i]);
+            newEmotionButton.attr("data-value", topics[i]);
             $("#emotionButtons").append(newEmotionButton)
         }
 
@@ -30,14 +32,14 @@ $(document).ready(function () {
     buttonPrint();
 
     // When submit button is pressed
-    $("#addEmotion").on("click", function(){
-        // event.preventDefault();  <------- make sure if you add this back in to put "event" into the function parameters above
+    $("form").on("submit", function(event){
+        event.preventDefault();  
         newItem = $("#emotionInput").val().trim();
         if (newItem.length === 0) {
             alert("Type a work in the textbox to add a button.");
         }
-        else if (emotionGifs.includes(newItem)!== true) {
-           emotionGifs.push(newItem);
+        else if (topics.includes(newItem)!== true) {
+           topics.push(newItem);
             buttonPrint(); 
         } else {
             alert("You already have a button for that!");
@@ -54,7 +56,7 @@ $(document).ready(function () {
 
         var searchTerm = $(this).attr("data-value");
         
-        var apiURLBase = "https://api.giphy.com/v1/gifs/search?api_key=iiHxX5ZyrJst3sHz4lwHPzpO14Eot1nx&q=" + searchTerm + "&limit=10&offset=0&&lang=en";
+        var apiURLBase = "http://api.giphy.com/v1/gifs/search?api_key=iiHxX5ZyrJst3sHz4lwHPzpO14Eot1nx&q=" + searchTerm + "&limit=10&offset=0&&lang=en";
 
 
         // AJAX Call       
@@ -80,8 +82,8 @@ $(document).ready(function () {
                 gifImage.attr("data-image_number", i);
                 gifImage.addClass("still");
 
-                $(imageDiv).append("<p> GIF Parental Rating: " + apiResponse.data[i].rating + "</p>")
                 $(imageDiv).append(gifImage);
+                $(imageDiv).append("<p> GIF Parental Rating: " + apiResponse.data[i].rating + "</p>")
                 $("#gifPanel").append(imageDiv);
             }
 
