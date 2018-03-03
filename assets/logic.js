@@ -56,7 +56,7 @@ $(document).ready(function () {
 
         var searchTerm = $(this).attr("data-value");
         
-        var apiURLBase = "http://api.giphy.com/v1/gifs/search?api_key=iiHxX5ZyrJst3sHz4lwHPzpO14Eot1nx&q=" + searchTerm + "&limit=10&offset=0&&lang=en";
+        var apiURLBase = "https://api.giphy.com/v1/gifs/search?api_key=iiHxX5ZyrJst3sHz4lwHPzpO14Eot1nx&q=" + searchTerm + "&limit=10&offset=0&&lang=en";
 
 
         // AJAX Call       
