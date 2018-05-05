@@ -2,10 +2,10 @@
 
 # giphy-API-search-tool
 
-##Do you need a gif to send your friend now?
-##Well Do I Have the solution for you!
+## Do you need a gif to send your friend now?
+## Well Do I Have the solution for you!
   
-##https://nick-d-brown.github.io/giphy-API-search-tool/
+## https://nick-d-brown.github.io/giphy-API-search-tool/
 
 ## :mag: Table of contents :mag:
 
@@ -49,7 +49,7 @@ This web app is a search tool that utilizes the GIPHY API to pull up 10 gifs tha
 - [jQuery](https://jquery.com/)
 - AJAX
 - Web APIs
-    -[Giphy](https://developers.giphy.com/)
+    - [Giphy](https://developers.giphy.com/)
 - Responsive Design
 
 
@@ -66,6 +66,7 @@ Throughout the creation of this web app, the main challenge that was encountered
 -[Giphy API](https://developers.giphy.com/)
 -[jQuery AJAX Docs](http://api.jquery.com/category/ajax/low-level-interface/)
 
+---
 
 ### 4-Issues :question::exclamation:
 
